@@ -53,8 +53,8 @@ for file_name in all_input_files:
 	path_file_name = "./shortest_path_dict/" + file_num + "_" + path_dict_name
 	dist_file_name = "./shortest_dist_dict/" + file_num + "_" + dist_dict_name
 
-	pickle.dump( path_dict, open( path_file_name, "wb" ) )
-	pickle.dump( dist_dict, open( dist_file_name, "wb" ) )
+	pickle.dump( path_dict, open( path_file_name, "wb"), protocol=2 )
+	pickle.dump( dist_dict, open( dist_file_name, "wb"), protocol=2 ) 
 	print(file_num, " done")
 
 
