@@ -57,8 +57,13 @@ for file_name in all_input_files:
 	path_file_name = "./dict_poly2/shortest_path_dict/" + file_num + "_" + path_dict_name
 	dist_file_name = "./dict_poly2/shortest_dist_dict/" + file_num + "_" + dist_dict_name
 
+<<<<<<< HEAD
 	pickle.dump( path_dict, open( path_file_name, "wb" ), protocol = 2 )
 	pickle.dump( dist_dict, open( dist_file_name, "wb" ), protocol = 2 )
+=======
+	pickle.dump( path_dict, open( path_file_name, "wb"), protocol=2 )
+	pickle.dump( dist_dict, open( dist_file_name, "wb"), protocol=2 ) 
+>>>>>>> 915088b235ccd30a00de566715414e3ac17de5a0
 	print(file_num, " done")
 
 

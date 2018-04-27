@@ -32,11 +32,13 @@ def graph_creator(adjacency_matrix, number_of_kingdoms):
 
 input_file_path = "./inputs"
 
+
 # all_input_files = [f for f in listdir(input_file_path) if isfile(join(input_file_path, f))]
 
 all_input_files = []
 for i in range(726,753):
     all_input_files.append(str(i) + ".in")
+
 neigbhors_dict_name = "neighbors_dict.p"
 neighbors_cost_name = "neighbors_cost.p"
 
@@ -46,7 +48,6 @@ for file_name in all_input_files:
     number_of_kingdoms, list_of_kingdom_names, starting_kingdom, adjacency_matrix = data_parser(input_data)
     source_index = list_of_kingdom_names.index(starting_kingdom)
     G = graph_creator(adjacency_matrix, number_of_kingdoms)
-
 
 
     neighbors_dict_file_name = "./dict_poly2/neighbors_dict/" + file_num + "_" + neigbhors_dict_name
